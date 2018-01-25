@@ -1,0 +1,84 @@
+<!-- Template Plugin build file -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.drkmatr1984</groupId>
+    <artifactId>RPGAdditions</artifactId>
+    <version>0.1</version>
+    <name>RPGAdditions</name>
+
+    <!-- Properties -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <build.number>Unknown</build.number>
+    </properties>
+
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+			<id>md_5-repo</id>
+			<url>http://repo.md-5.net/content/groups/public/</url>
+		  </repository>
+		  <repository>
+			<id>drkmatr1984</id>
+			<url>http://minevolt.net/repo/</url>
+		  </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.chrismin13</groupId>
+            <artifactId>AdditionsAPI</artifactId>
+            <version>1.2.2-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>ru.beykerykt</groupId>
+            <artifactId>LightAPI</artifactId>
+            <version>3.2.4</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.sipsi133</groupId>
+            <artifactId>ShinyItems</artifactId>
+            <version>1.6.1</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>       
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
