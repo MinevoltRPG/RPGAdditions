@@ -1,37 +1,14 @@
 package me.drkmatr1984.RPGAdditions.daggers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.bukkit.Material;
-
-import com.chrismin13.additionsapi.items.textured.CustomTexturedTool;
-import com.chrismin13.additionsapi.recipes.CustomShapedRecipe;
+import org.bukkit.material.MaterialData;
 
 import us.fihgu.toolbox.item.DamageableItem;
 
-public class GoldDagger extends CustomTexturedTool {
+public class GoldDagger extends Dagger {
 
 	public GoldDagger() {
-		super(DamageableItem.DIAMOND_SWORD, "rpg_additions:gold_dagger", "gold_dagger");
-
-		setUnbreakable(true); 
-		setUnbreakableVisibility(false); 
+		super(DamageableItem.GOLDEN_SWORD, 30, "gold_dagger", "Gold Dagger", new MaterialData(Material.GOLD_INGOT), new MaterialData(Material.STICK));
 		addAttackDamage(2.0);    //Attack Damage
-		addAttackSpeed(2.1);     //Attack Speed
-		setToolLikeAttributes(true);
-		setAttributeVisibility(false);
-		setDisplayName("Gold Dagger");
-		setFakeDurability(30);   //Durability
-
-		// This will get the Crafting Recipe for the Sword and set the materials
-		// for crafting to Obsidian and Redstone Torch.
-		List<CustomShapedRecipe> list = new ArrayList<CustomShapedRecipe>();
-		list.add(new CustomShapedRecipe().setShape("xxx", "xdx", "sxx").setIngredient('x', Material.AIR)
-				.setIngredient('d', Material.GOLD_INGOT).setIngredient('s', Material.STICK));
-		list.add(new CustomShapedRecipe().setShape("xxx", "xdx", "xxs").setIngredient('x', Material.AIR)
-				.setIngredient('d', Material.GOLD_INGOT).setIngredient('s', Material.STICK));
-		addAllCustomRecipes(list);
 	}
-
 }
