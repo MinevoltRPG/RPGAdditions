@@ -1,4 +1,4 @@
-package me.drkmatr1984.RPGAdditions.ores;
+package me.drkmatr1984.RPGAdditions.customitemtypes;
 
 import com.chrismin13.additionsapi.items.textured.CustomTexturedItem;
 import us.fihgu.toolbox.item.DamageableItem;

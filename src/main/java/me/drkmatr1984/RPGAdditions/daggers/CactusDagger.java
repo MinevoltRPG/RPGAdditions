@@ -6,10 +6,10 @@ import org.bukkit.material.MaterialData;
 import me.drkmatr1984.RPGAdditions.customitemtypes.Dagger;
 import us.fihgu.toolbox.item.DamageableItem;
 
-public class BoneDagger extends Dagger {
+public class CactusDagger extends Dagger {
 	
-	public BoneDagger() {
-		super(DamageableItem.WOODEN_SWORD, 243, "bone_dagger", "Bone Dagger", new MaterialData(Material.BONE_BLOCK), new MaterialData(Material.BONE));
+	public CactusDagger() {
+		super(DamageableItem.STONE_SWORD, 101, "cactus_dagger", "Cactus Dagger", new MaterialData(Material.CACTUS), new MaterialData(Material.STICK));
 		addAttackDamage(3.0);
 	}
 }

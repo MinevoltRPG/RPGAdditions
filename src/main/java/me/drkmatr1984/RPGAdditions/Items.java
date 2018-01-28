@@ -7,6 +7,7 @@ import me.drkmatr1984.RPGAdditions.daggers.*;
 import me.drkmatr1984.RPGAdditions.ores.SilverIngot;
 import me.drkmatr1984.RPGAdditions.ores.SilverNugget;
 import me.drkmatr1984.RPGAdditions.swords.BoneSword;
+import me.drkmatr1984.RPGAdditions.swords.CactusSword;
 import me.drkmatr1984.RPGAdditions.swords.GlowstoneSword;
 import me.drkmatr1984.RPGAdditions.swords.QuartzSword;
 import me.drkmatr1984.RPGAdditions.swords.SilverSword;
@@ -33,6 +34,7 @@ public class Items implements Listener { // Class must implement Listener
 		event.addCustomItem(new BigOakWoodDagger());
 		event.addCustomItem(new BirchWoodDagger());
 		event.addCustomItem(new BoneDagger());
+		event.addCustomItem(new CactusDagger());
 		event.addCustomItem(new ClayDagger());
 		event.addCustomItem(new CoalDagger());
 		event.addCustomItem(new EndStoneDagger());
@@ -45,6 +47,7 @@ public class Items implements Listener { // Class must implement Listener
 		event.addCustomItem(new PrismarineDagger());
 		event.addCustomItem(new QuartzDagger());
 		event.addCustomItem(new RedstoneDagger());
+		event.addCustomItem(new SilverDagger());
 		event.addCustomItem(new SlimeDagger());
 		event.addCustomItem(new SpruceWoodDagger());
 		
@@ -52,6 +55,7 @@ public class Items implements Listener { // Class must implement Listener
 		event.addCustomItem(new GlowstoneSword());
 		event.addCustomItem(new QuartzSword());
 		event.addCustomItem(new BoneSword());
+		event.addCustomItem(new CactusSword());
 		event.addCustomItem(new SilverSword());
 		
 		//################    Ores    ##################

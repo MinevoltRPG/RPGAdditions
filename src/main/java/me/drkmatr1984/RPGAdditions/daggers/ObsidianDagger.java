@@ -6,6 +6,7 @@ import org.bukkit.material.MaterialData;
 
 import com.comphenix.attribute.Attributes;
 
+import me.drkmatr1984.RPGAdditions.customitemtypes.Dagger;
 import us.fihgu.toolbox.item.DamageableItem;
 
 public class ObsidianDagger extends Dagger {

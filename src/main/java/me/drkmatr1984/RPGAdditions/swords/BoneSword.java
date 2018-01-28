@@ -3,6 +3,7 @@ package me.drkmatr1984.RPGAdditions.swords;
 import org.bukkit.Material;
 import org.bukkit.material.MaterialData;
 
+import me.drkmatr1984.RPGAdditions.customitemtypes.Sword;
 import us.fihgu.toolbox.item.DamageableItem;
 
 public class BoneSword extends Sword {

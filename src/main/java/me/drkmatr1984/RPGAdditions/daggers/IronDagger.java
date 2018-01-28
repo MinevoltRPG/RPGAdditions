@@ -3,6 +3,7 @@ package me.drkmatr1984.RPGAdditions.daggers;
 import org.bukkit.Material;
 import org.bukkit.material.MaterialData;
 
+import me.drkmatr1984.RPGAdditions.customitemtypes.Dagger;
 import us.fihgu.toolbox.item.DamageableItem;
 
 public class IronDagger extends Dagger {

@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.TreeSpecies;
 import org.bukkit.material.MaterialData;
 
+import me.drkmatr1984.RPGAdditions.customitemtypes.Dagger;
 import us.fihgu.toolbox.item.DamageableItem;
 
 public class WoodDagger extends Dagger{
