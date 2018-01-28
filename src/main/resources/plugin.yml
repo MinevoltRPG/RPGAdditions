@@ -4,4 +4,4 @@ main: me.drkmatr1984.RPGAdditions.RPGAdditions
 
 description: Adds new weapons, armor, and items to Spigot Servers
 depend: [AdditionsAPI]
-softdepend: [LightAPI, ShinyItems]
+softdepend: [LightAPI, ShinyItems, Werewolf]

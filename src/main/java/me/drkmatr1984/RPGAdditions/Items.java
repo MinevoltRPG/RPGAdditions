@@ -9,6 +9,7 @@ import me.drkmatr1984.RPGAdditions.ores.SilverNugget;
 import me.drkmatr1984.RPGAdditions.swords.BoneSword;
 import me.drkmatr1984.RPGAdditions.swords.GlowstoneSword;
 import me.drkmatr1984.RPGAdditions.swords.QuartzSword;
+import me.drkmatr1984.RPGAdditions.swords.SilverSword;
 
 public class Items implements Listener { // Class must implement Listener
 	
@@ -51,6 +52,7 @@ public class Items implements Listener { // Class must implement Listener
 		event.addCustomItem(new GlowstoneSword());
 		event.addCustomItem(new QuartzSword());
 		event.addCustomItem(new BoneSword());
+		event.addCustomItem(new SilverSword());
 		
 		//################    Ores    ##################
 		event.addCustomItem(new SilverNugget());
