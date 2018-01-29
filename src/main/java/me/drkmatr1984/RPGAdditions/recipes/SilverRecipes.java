@@ -59,7 +59,7 @@ public class SilverRecipes{
 			if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
 				setWerewolfSilverItems(silverIngot, nuggetStack);
 			}else {
-				new ShapedRecipeBuilder().forResult(new CustomItemStack(silverIngot).getItemStack()).withShape("sss", "sss", "sss").withIngredient('s', new CustomItemStack(silverNugget).getItemStack()).register();
+				new ShapedRecipeBuilder().forResult(ingotStack).withShape("sss", "sss", "sss").withIngredient('s', new CustomItemStack(nuggetStack).getItemStack()).register();
 			}
 			if(customSilverSword!=null) {
 				if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
