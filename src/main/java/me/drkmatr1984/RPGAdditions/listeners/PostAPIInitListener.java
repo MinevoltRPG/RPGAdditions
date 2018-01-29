@@ -10,12 +10,12 @@ import com.chrismin13.additionsapi.items.CustomItem;
 import com.google.common.collect.ImmutableList;
 
 import me.drkmatr1984.RPGAdditions.RPGAdditions;
-import me.drkmatr1984.RPGAdditions.daggers.GlowstoneDagger;
-import me.drkmatr1984.RPGAdditions.daggers.RedstoneDagger;
+import me.drkmatr1984.RPGAdditions.items.daggers.GlowstoneDagger;
+import me.drkmatr1984.RPGAdditions.items.daggers.RedstoneDagger;
 import me.drkmatr1984.RPGAdditions.recipes.AmethystRecipes;
 import me.drkmatr1984.RPGAdditions.recipes.BloodstoneRecipes;
 import me.drkmatr1984.RPGAdditions.recipes.SilverRecipes;
-import me.drkmatr1984.RPGAdditions.swords.GlowstoneSword;
+import me.drkmatr1984.RPGAdditions.items.swords.GlowstoneSword;
 
 public class PostAPIInitListener implements Listener {
 	
@@ -34,20 +34,38 @@ public class PostAPIInitListener implements Listener {
 				for(io.github.sipsi133.ShinyItem shinyItem : io.github.sipsi133.ShinyItems.instance.getLightSources()) {
 					if(shinyItem.getMaterial().equals(Material.GLOWSTONE)) {
 						if(cItem instanceof GlowstoneDagger) {
-							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(Material.GLOWSTONE), cItem.getDurability(), true));
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
 						}
 						if(cItem instanceof GlowstoneSword) {
-							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(Material.GLOWSTONE), cItem.getDurability(), true));
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+						}
+					}
+					if(shinyItem.getMaterial().equals(Material.GLOWSTONE_DUST)) {
+						if(cItem instanceof GlowstoneDagger) {
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+						}
+						if(cItem instanceof GlowstoneSword) {
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
 						}
 					}
 					if(shinyItem.getMaterial().equals(Material.REDSTONE_TORCH_ON)) {
 						if(cItem instanceof RedstoneDagger) {
-							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(Material.REDSTONE_TORCH_ON), cItem.getDurability(), true));
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
 						}
 					}
 					if(shinyItem.getMaterial().equals(Material.REDSTONE_TORCH_OFF)) {
 						if(cItem instanceof RedstoneDagger) {
-							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(Material.REDSTONE_TORCH_OFF), cItem.getDurability(), true));
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+						}
+					}
+					if(shinyItem.getMaterial().equals(Material.REDSTONE)) {
+						if(cItem instanceof RedstoneDagger) {
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+						}
+					}
+					if(shinyItem.getMaterial().equals(Material.REDSTONE_BLOCK)) {
+						if(cItem instanceof RedstoneDagger) {
+							io.github.sipsi133.ShinyItems.getInstance().getLightSources().add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
 						}
 					}
 				}

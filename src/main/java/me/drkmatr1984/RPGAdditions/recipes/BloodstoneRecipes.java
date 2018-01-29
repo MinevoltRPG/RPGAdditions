@@ -8,8 +8,8 @@ import com.chrismin13.additionsapi.items.CustomItem;
 import com.chrismin13.additionsapi.items.CustomItemStack;
 import com.google.common.collect.ImmutableList;
 
-import me.drkmatr1984.RPGAdditions.ores.Bloodstone;
-import me.drkmatr1984.RPGAdditions.swords.BloodstoneSword;
+import me.drkmatr1984.RPGAdditions.items.ores.Bloodstone;
+import me.drkmatr1984.RPGAdditions.items.swords.BloodstoneSword;
 
 public class BloodstoneRecipes{
 	

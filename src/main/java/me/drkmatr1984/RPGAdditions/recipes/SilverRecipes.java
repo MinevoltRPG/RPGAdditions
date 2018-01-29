@@ -15,13 +15,15 @@ import com.chrismin13.additionsapi.items.CustomItemStack;
 import com.google.common.collect.ImmutableList;
 
 import me.drkmatr1984.RPGAdditions.RPGAdditions;
+import me.drkmatr1984.RPGAdditions.customitemtypes.CustomAxe;
 import me.drkmatr1984.RPGAdditions.customitemtypes.CustomDagger;
 import me.drkmatr1984.RPGAdditions.customitemtypes.CustomSword;
 import me.drkmatr1984.RPGAdditions.customitemtypes.Ore;
-import me.drkmatr1984.RPGAdditions.daggers.SilverDagger;
-import me.drkmatr1984.RPGAdditions.ores.SilverIngot;
-import me.drkmatr1984.RPGAdditions.ores.SilverNugget;
-import me.drkmatr1984.RPGAdditions.swords.SilverSword;
+import me.drkmatr1984.RPGAdditions.items.axes.SilverAxe;
+import me.drkmatr1984.RPGAdditions.items.daggers.SilverDagger;
+import me.drkmatr1984.RPGAdditions.items.ores.SilverIngot;
+import me.drkmatr1984.RPGAdditions.items.ores.SilverNugget;
+import me.drkmatr1984.RPGAdditions.items.swords.SilverSword;
 
 public class SilverRecipes{
 	
@@ -33,6 +35,9 @@ public class SilverRecipes{
 		CustomItem silverIngot = null;
 		CustomItem customSilverSword = null;
 		CustomItem customSilverDagger = null;
+		CustomItem customSilverAxe = null;
+		CustomItem customSilverHoe = null;
+		CustomItem customSilverShovel = null;
 		for(CustomItem cItem : customItems) {
 			if(cItem instanceof Ore) {
 				if(cItem instanceof SilverIngot) {
@@ -50,6 +55,11 @@ public class SilverRecipes{
 			if(cItem instanceof CustomDagger) {
 				if(cItem instanceof SilverDagger) {
 					customSilverDagger = cItem;
+				}
+			}
+			if(cItem instanceof CustomAxe) {
+				if(cItem instanceof SilverAxe) {
+					customSilverAxe = cItem;
 				}
 			}
 		}
@@ -73,6 +83,14 @@ public class SilverRecipes{
 					setWerewolfSilverItems(customSilverDagger, ingotStack);
 				}else {
 					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverDagger)).getItemStack()).withShape("sss", "sxs", "bss").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
+				}
+			}
+			if(customSilverAxe!=null) {
+				if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
+					setWerewolfSilverItems(customSilverAxe, ingotStack);
+				}else {
+					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverAxe)).getItemStack()).withShape("sxx", "sbx", "sbs").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
+					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverAxe)).getItemStack()).withShape("xxs", "xbs", "sbs").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
 				}
 			}
 		}
@@ -128,7 +146,11 @@ public class SilverRecipes{
 		if(customItem instanceof SilverDagger) {
 			new ShapedRecipeBuilder().forResult(silverItem).withShape("sss", "sxs", "ssb").withIngredient('x', silverIngredient).withIngredient('b', Material.STICK).register();
 			new ShapedRecipeBuilder().forResult(silverItem).withShape("sss", "sxs", "bss").withIngredient('x', silverIngredient).withIngredient('b', Material.STICK).register();
-		}		
+		}
+		if(customItem instanceof SilverAxe) {
+			new ShapedRecipeBuilder().forResult(silverItem).withShape("xxs", "xbs", "sbs").withIngredient('x', silverIngredient).withIngredient('b', Material.STICK).register();
+			new ShapedRecipeBuilder().forResult(silverItem).withShape("sxx", "sbx", "sbs").withIngredient('x', silverIngredient).withIngredient('b', Material.STICK).register();
+		}
 		Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&f[&aRPG&eAdditions&f] &6Werewolf &adetected. Silver Weapons will do extra damage to werewolves!"));
 	}
 	

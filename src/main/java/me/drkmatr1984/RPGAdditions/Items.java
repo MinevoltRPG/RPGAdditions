@@ -3,28 +3,9 @@ package me.drkmatr1984.RPGAdditions;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import com.chrismin13.additionsapi.events.AdditionsAPIInitializationEvent;
-import me.drkmatr1984.RPGAdditions.daggers.*;
-import me.drkmatr1984.RPGAdditions.ores.Amethyst;
-import me.drkmatr1984.RPGAdditions.ores.Bloodstone;
-import me.drkmatr1984.RPGAdditions.ores.Citrine;
-import me.drkmatr1984.RPGAdditions.ores.Onyx;
-import me.drkmatr1984.RPGAdditions.ores.Ruby;
-import me.drkmatr1984.RPGAdditions.ores.Sapphire;
-import me.drkmatr1984.RPGAdditions.ores.SilverIngot;
-import me.drkmatr1984.RPGAdditions.ores.SilverNugget;
-import me.drkmatr1984.RPGAdditions.ores.YellowTopaz;
-import me.drkmatr1984.RPGAdditions.swords.AmethystSword;
-import me.drkmatr1984.RPGAdditions.swords.BloodstoneSword;
-import me.drkmatr1984.RPGAdditions.swords.BoneSword;
-import me.drkmatr1984.RPGAdditions.swords.CactusSword;
-import me.drkmatr1984.RPGAdditions.swords.CitrineSword;
-import me.drkmatr1984.RPGAdditions.swords.GlowstoneSword;
-import me.drkmatr1984.RPGAdditions.swords.OnyxSword;
-import me.drkmatr1984.RPGAdditions.swords.QuartzSword;
-import me.drkmatr1984.RPGAdditions.swords.RubySword;
-import me.drkmatr1984.RPGAdditions.swords.SapphireSword;
-import me.drkmatr1984.RPGAdditions.swords.SilverSword;
-import me.drkmatr1984.RPGAdditions.swords.YellowTopazSword;
+import me.drkmatr1984.RPGAdditions.items.daggers.*;
+import me.drkmatr1984.RPGAdditions.items.ores.*;
+import me.drkmatr1984.RPGAdditions.items.swords.*;
 
 public class Items implements Listener { // Class must implement Listener
 	
@@ -43,32 +24,38 @@ public class Items implements Listener { // Class must implement Listener
 		//################      Hoes     ##################
 		
 		//################    Daggers    ##################
-		
-		event.addCustomItem(new DiamondDagger());
-		event.addCustomItem(new GoldDagger());
-		event.addCustomItem(new StoneDagger());
-		event.addCustomItem(new IronDagger());
-		event.addCustomItem(new EmeraldDagger());
 		event.addCustomItem(new AcaciaWoodDagger());
+		event.addCustomItem(new AmethystDagger());
 		event.addCustomItem(new BigOakWoodDagger());
 		event.addCustomItem(new BirchWoodDagger());
+		event.addCustomItem(new BloodstoneDagger());
 		event.addCustomItem(new BoneDagger());
 		event.addCustomItem(new CactusDagger());
+		event.addCustomItem(new CitrineDagger());
 		event.addCustomItem(new ClayDagger());
 		event.addCustomItem(new CoalDagger());
+		event.addCustomItem(new DiamondDagger());
+		event.addCustomItem(new EmeraldDagger());
 		event.addCustomItem(new EndStoneDagger());
 		event.addCustomItem(new GlowstoneDagger());
+		event.addCustomItem(new GoldDagger());		
+		event.addCustomItem(new IronDagger());
 		event.addCustomItem(new JungleWoodDagger());
 		event.addCustomItem(new LapisDagger());
 		event.addCustomItem(new NetherrackDagger());
 		event.addCustomItem(new OakWoodDagger());
 		event.addCustomItem(new ObsidianDagger());
+		event.addCustomItem(new OnyxDagger());
 		event.addCustomItem(new PrismarineDagger());
 		event.addCustomItem(new QuartzDagger());
 		event.addCustomItem(new RedstoneDagger());
+		event.addCustomItem(new RubyDagger());
+		event.addCustomItem(new SapphireDagger());
 		event.addCustomItem(new SilverDagger());
 		event.addCustomItem(new SlimeDagger());
 		event.addCustomItem(new SpruceWoodDagger());
+		event.addCustomItem(new StoneDagger());
+		event.addCustomItem(new YellowTopazDagger());
 		
 		//################    Swords    ##################
 		event.addCustomItem(new AmethystSword());

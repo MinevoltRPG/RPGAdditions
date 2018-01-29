@@ -8,8 +8,8 @@ import com.chrismin13.additionsapi.items.CustomItem;
 import com.chrismin13.additionsapi.items.CustomItemStack;
 import com.google.common.collect.ImmutableList;
 
-import me.drkmatr1984.RPGAdditions.ores.Amethyst;
-import me.drkmatr1984.RPGAdditions.swords.AmethystSword;
+import me.drkmatr1984.RPGAdditions.items.ores.Amethyst;
+import me.drkmatr1984.RPGAdditions.items.swords.AmethystSword;
 
 public class AmethystRecipes{
 	
