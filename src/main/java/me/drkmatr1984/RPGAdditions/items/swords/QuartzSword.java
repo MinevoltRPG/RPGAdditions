@@ -10,6 +10,6 @@ public class QuartzSword extends Sword {
 	
 	public QuartzSword() {
 		super(DamageableItem.DIAMOND_SWORD, 251, "quartz_sword", "Quartz Sword", new MaterialData(Material.QUARTZ), new MaterialData(Material.STICK));
-		addAttackDamage(6.0);		
+		addAttackDamage(7.0);		
 	}
 }

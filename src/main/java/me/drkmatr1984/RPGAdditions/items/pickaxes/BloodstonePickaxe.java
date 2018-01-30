@@ -6,7 +6,7 @@ import us.fihgu.toolbox.item.DamageableItem;
 public class BloodstonePickaxe extends CustomPickaxe {
 	
 	public BloodstonePickaxe() {
-		super(DamageableItem.DIAMOND_PICKAXE, 2048, "amethyst_hoe", "Amethyst Hoe");
+		super(DamageableItem.DIAMOND_PICKAXE, 2048, "bloodstone_pickaxe", "Bloodstone Pickaxe");
 		addAttackDamage(6.0);		
 	}
 }

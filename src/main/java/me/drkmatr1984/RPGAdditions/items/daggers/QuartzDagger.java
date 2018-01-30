@@ -10,6 +10,6 @@ public class QuartzDagger extends Dagger {
 	
 	public QuartzDagger() {
 		super(DamageableItem.DIAMOND_SWORD, 203, "quartz_dagger", "Quartz Dagger", new MaterialData(Material.QUARTZ), new MaterialData(Material.STICK));
-		addAttackDamage(3.0);    //Attack Damage
+		addAttackDamage(3.5);    //Attack Damage
 	}
 }

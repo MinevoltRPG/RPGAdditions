@@ -9,7 +9,7 @@ import us.fihgu.toolbox.item.DamageableItem;
 public class QuartzAxe extends Axe {
 	
 	public QuartzAxe() {
-		super(DamageableItem.DIAMOND_AXE, 251, 0.9, "quartz_axe", "Quartz Axe", new MaterialData(Material.QUARTZ), new MaterialData(Material.STICK));
+		super(DamageableItem.DIAMOND_AXE, 251, 1.0, "quartz_axe", "Quartz Axe", new MaterialData(Material.QUARTZ), new MaterialData(Material.STICK));
 		addAttackDamage(9.0);		
 	}
 }

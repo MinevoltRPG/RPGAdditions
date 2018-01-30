@@ -3,10 +3,10 @@ package me.drkmatr1984.RPGAdditions.items.pickaxes;
 import me.drkmatr1984.RPGAdditions.customitemtypes.CustomPickaxe;
 import us.fihgu.toolbox.item.DamageableItem;
 
-public class AmethystPickaxe extends CustomPickaxe {
+public class OnyxPickaxe extends CustomPickaxe {
 	
-	public AmethystPickaxe() {
-		super(DamageableItem.DIAMOND_PICKAXE, 2048, "amethyst_pickaxe", "Amethyst Pickaxe");
+	public OnyxPickaxe() {
+		super(DamageableItem.DIAMOND_PICKAXE, 2048, "onyx_pickaxe", "Onyx Pickaxe");
 		addAttackDamage(6.0);		
 	}
 }
