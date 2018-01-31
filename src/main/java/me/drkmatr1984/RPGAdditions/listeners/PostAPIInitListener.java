@@ -14,6 +14,7 @@ import me.drkmatr1984.RPGAdditions.items.daggers.GlowstoneDagger;
 import me.drkmatr1984.RPGAdditions.items.daggers.RedstoneDagger;
 import me.drkmatr1984.RPGAdditions.recipes.AmethystRecipes;
 import me.drkmatr1984.RPGAdditions.recipes.BloodstoneRecipes;
+import me.drkmatr1984.RPGAdditions.recipes.SilverFurnaceRecipes;
 import me.drkmatr1984.RPGAdditions.recipes.SilverRecipes;
 import me.drkmatr1984.RPGAdditions.items.swords.GlowstoneSword;
 
@@ -26,8 +27,10 @@ public class PostAPIInitListener implements Listener {
 		SilverRecipes.silverItems(customItems);
 		AmethystRecipes.amethystItems(customItems);
 		BloodstoneRecipes.bloodstoneItems(customItems);
+		new SilverFurnaceRecipes(customItems).silverFurnaceRecipes();
+		
 	}
-	
+
 	public void shinyItems(ImmutableList<CustomItem> customItems) {
 		if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("ShinyItems")) {
 			for(CustomItem cItem : customItems) {

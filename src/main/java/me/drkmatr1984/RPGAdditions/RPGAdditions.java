@@ -29,4 +29,11 @@ public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
 	public PluginManager getPluginManager() {
 		return this.pm;
 	}
+	
+	public boolean isVanillaAdditions() {
+		if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("VanillaAdditions")) {
+			return true;
+		}
+		return false;
+	}
 }
