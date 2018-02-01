@@ -22,13 +22,12 @@ public class PostAPIInitListener implements Listener {
 	
 	@EventHandler
 	public void onPostInitialization(AdditionsAPIPostInitializationEvent event) {
-		ImmutableList<CustomItem> customItems = event.getCustomItems();
-		shinyItems(customItems);
-		SilverRecipes.silverItems(customItems);
+		ImmutableList<CustomItem> customItems = event.getCustomItems();	
 		AmethystRecipes.amethystItems(customItems);
 		BloodstoneRecipes.bloodstoneItems(customItems);
+		SilverRecipes.silverItems(customItems);
 		new SilverFurnaceRecipes(customItems).silverFurnaceRecipes();
-		
+		shinyItems(customItems);		
 	}
 
 	public void shinyItems(ImmutableList<CustomItem> customItems) {

@@ -4,8 +4,8 @@ import java.util.logging.Logger;
 
 import org.bukkit.plugin.PluginManager;
 
+import me.drkmatr1984.RPGAdditions.compatability.WerewolfPluginManager;
 import me.drkmatr1984.RPGAdditions.listeners.PostAPIInitListener;
-import me.drkmatr1984.RPGAdditions.listeners.WerewolfDamageListener;
 import me.drkmatr1984.customevents.CustomEvents;
 
 public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
@@ -13,6 +13,7 @@ public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
 	private Logger log;
 	private PluginManager pm;
 	private static RPGAdditions plugin;
+	private WerewolfPluginManager werewolfPluginManager;
   
 	public void onEnable()
 	{
@@ -21,11 +22,12 @@ public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
 		CustomEvents events = new CustomEvents(this, false, false, true);
 		events.initializeLib();
 		pm = getServer().getPluginManager();
+		if(isWerewolf()) {
+			werewolfPluginManager = new WerewolfPluginManager(this);
+		}
 		pm.registerEvents(new Items(this), this);
 		pm.registerEvents(new PostAPIInitListener(), this);
-		if(isWerewolf()) {
-			pm.registerEvents(new WerewolfDamageListener(), this);
-		}			
+					
 		this.log.info("RPGAdditions enabled!");
 	}
 	
@@ -49,5 +51,9 @@ public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
 			return true;
 		}
 		return false;
+	}
+	
+	public WerewolfPluginManager getWerewolfPluginManager() {
+		return this.werewolfPluginManager;		
 	}
 }
