@@ -66,27 +66,27 @@ public class SilverRecipes{
 		if(silverNugget!=null && silverIngot!=null) {
 			ingotStack = new CustomItemStack(silverIngot).getItemStack();
 			ItemStack nuggetStack = new CustomItemStack(silverNugget).getItemStack();
-			if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
+			if(RPGAdditions.getInstance().isWerewolf()) {
 				setWerewolfSilverItems(silverIngot, nuggetStack);
 			}else {
 				new ShapedRecipeBuilder().forResult(ingotStack).withShape("sss", "sss", "sss").withIngredient('s', new CustomItemStack(nuggetStack).getItemStack()).register();
 			}
 			if(customSilverSword!=null) {
-				if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
+				if(RPGAdditions.getInstance().isWerewolf()) {
 					setWerewolfSilverItems(customSilverSword, ingotStack);
 				}else {
 					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverSword)).getItemStack()).withShape("sxs", "sxs", "sbs").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
 				}				
 			}
 			if(customSilverDagger!=null) {
-				if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
+				if(RPGAdditions.getInstance().isWerewolf()) {
 					setWerewolfSilverItems(customSilverDagger, ingotStack);
 				}else {
 					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverDagger)).getItemStack()).withShape("sss", "sxs", "bss").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
 				}
 			}
 			if(customSilverAxe!=null) {
-				if(RPGAdditions.getInstance().getPluginManager().isPluginEnabled("Werewolf")) {
+				if(RPGAdditions.getInstance().isWerewolf()) {
 					setWerewolfSilverItems(customSilverAxe, ingotStack);
 				}else {
 					new ShapedRecipeBuilder().forResult((new CustomItemStack(customSilverAxe)).getItemStack()).withShape("sxx", "sbx", "sbs").withIngredient('x', ingotStack).withIngredient('b', Material.STICK).register();
@@ -97,6 +97,7 @@ public class SilverRecipes{
 	}
 	
 	private static void setWerewolfSilverItems(CustomItem customItem, ItemStack silverIngredient) {
+		//Match Lore for Silver Items with Werewolf Silver Item Lore
 		ItemMeta werewolfMeta = us.rfsmassacre.Werewolf.WerewolfPlugin.getItemManager().getWerewolfItem(us.rfsmassacre.Werewolf.Items.WerewolfItem.WerewolfItemType.SILVER_SWORD).getItemMeta();				
 		ItemStack silverItem = (new CustomItemStack(customItem)).getItemStack();
 		ItemMeta silverMeta = null;
@@ -111,22 +112,7 @@ public class SilverRecipes{
 		List<String> lore = new ArrayList<String>();
 		if (werewolfMeta.hasLore()) {
 			for(String s : werewolfMeta.getLore()) {
-				if(s.contains("The purified metal from your")) {
-					s = s.replace("The purified metal from your", "");
-					lore.add(new String(ChatColor.translateAlternateColorCodes('&', "&f&oThere are stories in Minevoltia&r")) + s);
-				}else if(s.contains("iron sword has become silver.")) {
-					s = s.replace("iron sword has become silver.", "");
-					lore.add(new String(ChatColor.translateAlternateColorCodes('&', "&f&oabout werewolves and their&r")) + s);
-				}else if(s.contains("This blade pierces through the")){
-					s = s.replace("This blade pierces through the", "");
-					lore.add(new String(ChatColor.translateAlternateColorCodes('&', "&f&oweaknesses to Silver items.&r")) + s);
-				}else if(s.contains("defense of any Werewolf.")) {
-					s = s.replace("defense of any Werewolf.", "");
-					lore.add("");
-					lore.add(new String(ChatColor.translateAlternateColorCodes('&', "&eDeals Extra Damage to &6&lWerewolves&r")) + s);
-				}else {
-					lore.add(s);
-				}					
+				lore.add(s);					
 			}
 			if(silverMeta.hasLore()) {
 				for(String s : silverMeta.getLore()) {

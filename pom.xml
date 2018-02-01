@@ -57,6 +57,13 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.chrismin13.vanillaadditions</groupId>
+            <artifactId>VanillaAdditions</artifactId>
+            <version>1.2.6</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>ru.beykerykt</groupId>
             <artifactId>LightAPI</artifactId>
             <version>3.2.4</version>
@@ -86,7 +93,12 @@
             <groupId>org.inventivetalent</groupId>
             <artifactId>itembuilder</artifactId>
             <version>1.0.10</version>
-        </dependency>       
+        </dependency>
+        <dependency>
+        	<groupId>me.drkmatr1984</groupId>
+   			<artifactId>customevents</artifactId>
+    		<version>0.11</version>   
+    	</dependency>   
     </dependencies>
     <build>
         <plugins>
@@ -114,6 +126,7 @@
                                 <includes>
                                     <include>org.inventivetalent:recipebuilder</include>
                                     <include>org.inventivetalent:itembuilder</include>
+                                    <include>me.drkmatr1984:customevents</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
