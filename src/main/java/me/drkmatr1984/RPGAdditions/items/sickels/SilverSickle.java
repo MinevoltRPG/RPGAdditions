@@ -11,6 +11,12 @@ public class SilverSickle extends CustomSickle {
 		addAttackDamage(1.5);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "sickle");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Sickle");
+				}
 				addLoreLine(s);
 			}
 		}

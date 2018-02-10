@@ -2,7 +2,7 @@ package me.drkmatr1984.RPGAdditions.recipes;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.inventivetalent.recipebuilder.ShapedRecipeBuilder;
+import org.inventivetalent.recipebuilderlib.ShapedRecipeBuilder;
 
 import com.chrismin13.additionsapi.items.CustomItem;
 import com.chrismin13.additionsapi.items.CustomItemStack;

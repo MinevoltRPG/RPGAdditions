@@ -11,6 +11,12 @@ public class SilverChisel extends CustomChisel {
 		addAttackDamage(6.0);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "chisel");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Chisel");
+				}
 				addLoreLine(s);
 			}
 		}

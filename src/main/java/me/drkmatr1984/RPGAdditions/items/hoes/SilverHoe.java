@@ -11,6 +11,12 @@ public class SilverHoe extends CustomHoe {
 		addAttackDamage(1.5);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "hoe");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Hoe");
+				}
 				addLoreLine(s);
 			}
 		}

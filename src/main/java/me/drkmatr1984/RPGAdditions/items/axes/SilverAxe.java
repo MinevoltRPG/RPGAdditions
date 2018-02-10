@@ -11,6 +11,12 @@ public class SilverAxe extends CustomAxe {
 		addAttackDamage(10.0);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "axe");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Axe");
+				}
 				addLoreLine(s);
 			}
 		}

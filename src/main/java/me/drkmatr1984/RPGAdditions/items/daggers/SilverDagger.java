@@ -11,6 +11,12 @@ public class SilverDagger extends CustomDagger {
 		addAttackDamage(4.0);    //Attack Damage
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "dagger");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Dagger");
+				}
 				addLoreLine(s);
 			}
 		}

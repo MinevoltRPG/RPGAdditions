@@ -11,6 +11,12 @@ public class SilverShovel extends CustomShovel {
 		addAttackDamage(6.5);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "shovel");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Shovel");
+				}
 				addLoreLine(s);
 			}
 		}

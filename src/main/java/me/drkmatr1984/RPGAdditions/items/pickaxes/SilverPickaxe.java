@@ -11,6 +11,12 @@ public class SilverPickaxe extends CustomPickaxe {
 		addAttackDamage(6.0);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {
+				if(s.contains("sword")){
+					s = s.replace("sword", "pickaxe");
+				}
+				if(s.contains("Sword")) {
+					s = s.replace("Sword", "Pickaxe");
+				}
 				addLoreLine(s);
 			}
 		}

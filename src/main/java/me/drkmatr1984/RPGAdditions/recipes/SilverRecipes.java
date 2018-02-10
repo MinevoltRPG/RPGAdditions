@@ -2,7 +2,7 @@ package me.drkmatr1984.RPGAdditions.recipes;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.inventivetalent.recipebuilder.ShapedRecipeBuilder;
+import org.inventivetalent.recipebuilderlib.ShapedRecipeBuilder;
 
 import com.chrismin13.additionsapi.items.CustomItem;
 import com.chrismin13.additionsapi.items.CustomItemStack;
@@ -97,17 +97,17 @@ public class SilverRecipes{
 				CustomRecipes.registerCustomShovelRecipe(customSilverShovel, silverIngot, Material.STICK);
 			}
 			if(customSilverPickaxe!=null) {
-				CustomRecipes.registerCustomShovelRecipe(customSilverPickaxe, silverIngot, Material.STICK);
+				CustomRecipes.registerCustomPickaxeRecipe(customSilverPickaxe, silverIngot, Material.STICK);
 			}
 			if(RPGAdditions.getInstance().isVanillaAdditions()) {
 				if(customSilverChisel!=null) {
-					CustomRecipes.registerCustomShovelRecipe(customSilverChisel, silverIngot, Material.STICK);
+					CustomRecipes.registerCustomChiselRecipe(customSilverChisel, silverIngot, Material.STICK);
 				}
 				if(customSilverDoubleAxe!=null) {
-					CustomRecipes.registerCustomShovelRecipe(customSilverDoubleAxe, silverIngot, Material.STICK);
+					CustomRecipes.registerCustomDoubleAxeRecipe(customSilverDoubleAxe, silverIngot, Material.STICK);
 				}
 				if(customSilverSickle!=null) {
-					CustomRecipes.registerCustomShovelRecipe(customSilverSickle, silverIngot, Material.STICK);
+					CustomRecipes.registerCustomSickleRecipe(customSilverSickle, silverIngot, Material.STICK);
 				}
 			}
 		}

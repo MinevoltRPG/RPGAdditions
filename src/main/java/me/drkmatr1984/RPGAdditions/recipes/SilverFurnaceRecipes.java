@@ -1,7 +1,6 @@
 package me.drkmatr1984.RPGAdditions.recipes;
 
-import org.bukkit.Bukkit;
-import org.bukkit.inventory.FurnaceRecipe;
+import org.inventivetalent.recipebuilderlib.FurnaceRecipeBuilder;
 
 import com.chrismin13.additionsapi.items.CustomItem;
 import com.chrismin13.additionsapi.items.CustomItemStack;
@@ -27,13 +26,12 @@ public class SilverFurnaceRecipes{
 		this.customItems = customItems;
 	}
     
-	@SuppressWarnings("deprecation")
 	public void silverFurnaceRecipes(){
 		SilverNugget silverNugget = null;
 		SilverHoe silverHoe = null;
 		SilverShovel silverShovel = null;
 		SilverAxe silverAxe = null;
-		SilverPickaxe silverPickAxe = null;
+		SilverPickaxe silverPickaxe = null;
 		SilverSword silverSword = null;
 		SilverDagger silverDagger = null;
 		SilverChisel silverChisel = null;
@@ -48,58 +46,67 @@ public class SilverFurnaceRecipes{
     		for(CustomItem cItem : this.customItems) {
     			if(cItem instanceof SilverHoe) {
     				silverHoe = (SilverHoe) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverHoe).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverHoe.getMaterial(), new CustomItemStack(silverHoe).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(cItem instanceof SilverShovel) {
     				silverShovel = (SilverShovel) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverShovel).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverShovel.getMaterial(), new CustomItemStack(silverShovel).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(cItem instanceof SilverPickaxe) {
-    				silverPickAxe = (SilverPickaxe) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				silverPickaxe = (SilverPickaxe) cItem;
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverPickaxe).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverPickAxe.getMaterial(), new CustomItemStack(silverPickAxe).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(cItem instanceof SilverAxe) {
     				silverAxe = (SilverAxe) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverAxe).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverAxe.getMaterial(), new CustomItemStack(silverAxe).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(cItem instanceof SilverSword) {
     				silverSword = (SilverSword) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverSword).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverSword.getMaterial(), new CustomItemStack(silverSword).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(cItem instanceof SilverDagger) {
     				silverDagger = (SilverDagger) cItem;
-    				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    				new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverDagger).getItemStack()).withExp((float)0.1).register();
+    				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
     					, silverDagger.getMaterial(), new CustomItemStack(silverDagger).getItemStack()
-    					.getDurability(), (float)0.1));
+    					.getDurability(), (float)0.1));*/
     			}
     			if(RPGAdditions.getInstance().isVanillaAdditions()) {
     				if(cItem instanceof SilverChisel) {
     	    			silverChisel = (SilverChisel) cItem;
-        				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    	    			new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverChisel).getItemStack()).withExp((float)0.1).register();
+        				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
         					, silverChisel.getMaterial(), new CustomItemStack(silverChisel).getItemStack()
-        					.getDurability(), (float)0.1));
+        					.getDurability(), (float)0.1));*/
     	    		}
     	    		if(cItem instanceof SilverDoubleAxe) {
     	    			silverDoubleAxe = (SilverDoubleAxe) cItem;
-        				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    	    			new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverDoubleAxe).getItemStack()).withExp((float)0.1).register();
+        				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
         					, silverDoubleAxe.getMaterial(), new CustomItemStack(silverDoubleAxe).getItemStack()
-        					.getDurability(), (float)0.1));
+        					.getDurability(), (float)0.1));*/
     	    		}
     	    		if(cItem instanceof SilverSickle) {
     	    			silverSickle = (SilverSickle) cItem;
-        				Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
+    	    			new FurnaceRecipeBuilder().forResult(new CustomItemStack(silverNugget).getItemStack()).withInput(new CustomItemStack(silverSickle).getItemStack()).withExp((float)0.1).register();
+        				/*Bukkit.addRecipe(new FurnaceRecipe(new CustomItemStack(silverNugget).getItemStack()
         					, silverSickle.getMaterial(), new CustomItemStack(silverSickle).getItemStack()
-        					.getDurability(), (float)0.1));
+        					.getDurability(), (float)0.1));*/
     	    		}
     			}    		
 	    	}
