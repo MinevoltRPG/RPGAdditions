@@ -1,4 +1,4 @@
-package me.drkmatr1984.RPGAdditions.recipes;
+package me.drkmatr1984.RPGAdditions.recipes.customRecipes;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -21,6 +21,7 @@ import me.drkmatr1984.RPGAdditions.items.pickaxes.SilverPickaxe;
 import me.drkmatr1984.RPGAdditions.items.shovels.SilverShovel;
 import me.drkmatr1984.RPGAdditions.items.sickels.SilverSickle;
 import me.drkmatr1984.RPGAdditions.items.swords.SilverSword;
+import me.drkmatr1984.RPGAdditions.recipes.CustomRecipes;
 
 public class SilverRecipes{
 	
@@ -28,15 +29,6 @@ public class SilverRecipes{
 	{
 		CustomItemStack silverNugget = null;
 		CustomItemStack silverIngot = null;
-		CustomItemStack customSilverSword = null;
-		CustomItemStack customSilverDagger = null;
-		CustomItemStack customSilverAxe = null;
-		CustomItemStack customSilverHoe = null;
-		CustomItemStack customSilverShovel = null;
-		CustomItemStack customSilverPickaxe = null;
-		CustomItemStack customSilverChisel = null;
-		CustomItemStack customSilverDoubleAxe = null;
-		CustomItemStack customSilverSickle = null;
 		for(CustomItem cItem : customItems) {
 			if(cItem instanceof Ore) {
 				if(cItem instanceof SilverIngot) {
@@ -52,63 +44,34 @@ public class SilverRecipes{
 			new ShapedRecipeBuilder().forResult(ingotStack).withShape("sss", "sss", "sss").withIngredient('s', silverNugget.getItemStack()).register();
 			for(CustomItem cItem : customItems) {
 				if(cItem instanceof SilverSword) {
-					customSilverSword = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomSwordRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(cItem instanceof SilverDagger) {
-					customSilverDagger = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomDaggerRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(cItem instanceof SilverAxe) {
-					customSilverAxe = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomAxeRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(cItem instanceof SilverHoe) {
-					customSilverHoe = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomHoeRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(cItem instanceof SilverShovel) {
-					customSilverShovel = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomShovelRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(cItem instanceof SilverPickaxe) {
-					customSilverPickaxe = new CustomItemStack(cItem);
+					CustomRecipes.registerCustomPickaxeRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 				}
 				if(RPGAdditions.getInstance().isVanillaAdditions()) {
 					if(cItem instanceof SilverChisel) {
-						customSilverChisel = new CustomItemStack(cItem);
+						CustomRecipes.registerCustomChiselRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 					}
 					if(cItem instanceof SilverDoubleAxe) {
-						customSilverDoubleAxe = new CustomItemStack(cItem);
+						CustomRecipes.registerCustomDoubleAxeRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 					}
 					if(cItem instanceof SilverSickle) {
-						customSilverSickle = new CustomItemStack(cItem);
+						CustomRecipes.registerCustomSickleRecipe(new CustomItemStack(cItem), silverIngot, Material.STICK);
 					}
 				}				
-			}
-			if(customSilverSword!=null) {
-				CustomRecipes.registerCustomSwordRecipe(customSilverSword, silverIngot, Material.STICK);				
-			}
-			if(customSilverDagger!=null) {
-				CustomRecipes.registerCustomDaggerRecipe(customSilverDagger, silverIngot, Material.STICK);
-			}
-			if(customSilverAxe!=null) {
-				CustomRecipes.registerCustomAxeRecipe(customSilverAxe, silverIngot, Material.STICK);
-			}
-			if(customSilverHoe!=null) {
-				CustomRecipes.registerCustomHoeRecipe(customSilverHoe, silverIngot, Material.STICK);
-			}
-			if(customSilverShovel!=null) {
-				CustomRecipes.registerCustomShovelRecipe(customSilverShovel, silverIngot, Material.STICK);
-			}
-			if(customSilverPickaxe!=null) {
-				CustomRecipes.registerCustomPickaxeRecipe(customSilverPickaxe, silverIngot, Material.STICK);
-			}
-			if(RPGAdditions.getInstance().isVanillaAdditions()) {
-				if(customSilverChisel!=null) {
-					CustomRecipes.registerCustomChiselRecipe(customSilverChisel, silverIngot, Material.STICK);
-				}
-				if(customSilverDoubleAxe!=null) {
-					CustomRecipes.registerCustomDoubleAxeRecipe(customSilverDoubleAxe, silverIngot, Material.STICK);
-				}
-				if(customSilverSickle!=null) {
-					CustomRecipes.registerCustomSickleRecipe(customSilverSickle, silverIngot, Material.STICK);
-				}
 			}
 		}
 	}

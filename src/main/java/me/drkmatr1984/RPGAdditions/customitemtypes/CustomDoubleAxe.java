@@ -9,8 +9,6 @@ public class CustomDoubleAxe extends CustomTexturedTool implements DoubleAxeAbil
 	
 	public CustomDoubleAxe(DamageableItem damageable, int durability, double attackSpeed, String identifier, String name) {
 		super(damageable, "rpg_additions:" + identifier, identifier);
-		setUnbreakable(true); 
-		setUnbreakableVisibility(false);
 		addAttackSpeed(attackSpeed);     //Attack Speed
 		setFakeDurability(durability);
 		setToolLikeAttributes(true);

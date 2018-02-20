@@ -11,6 +11,9 @@ public class Ore extends CustomTexturedItem {
 		setUnbreakableVisibility(false); 
 		setAttributeVisibility(false);
 		setHoeAbilities(false);
+		setEnchantable(false);
+		setCanBePlacedVisibility(false);
+		setCanDestroyVisibility(false);
 		setDisplayName(name);
 	}
 }

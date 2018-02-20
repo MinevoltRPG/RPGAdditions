@@ -13,8 +13,6 @@ public class CustomSickle extends CustomTexturedTool implements SickleAbilities{
 	public CustomSickle(DamageableItem damageable, int durability, int breakRadius, double attackSpeed, String identifier, String name) {
 		super(damageable, "rpg_additions:" + identifier, identifier);
 		this.breakRadius = breakRadius;
-		setUnbreakable(true); 
-		setUnbreakableVisibility(false);
 		addAttackSpeed(attackSpeed);     //Attack Speed
 		setFakeDurability(durability);
 		setToolLikeAttributes(true);

@@ -7,7 +7,7 @@ import us.fihgu.toolbox.item.DamageableItem;
 public class SilverHoe extends CustomHoe {
 	
 	public SilverHoe() {
-		super(DamageableItem.DIAMOND_HOE, 502, 0.25,  "silver_hoe", "Silver Hoe");
+		super(DamageableItem.IRON_HOE, 502, 0.25,  "silver_hoe", "Silver Hoe");
 		addAttackDamage(1.5);
 		if(RPGAdditions.getInstance().isWerewolf()) {
 			for(String s : RPGAdditions.getInstance().getWerewolfPluginManager().getSilverLore()) {

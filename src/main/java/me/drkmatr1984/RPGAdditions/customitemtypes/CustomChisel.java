@@ -9,8 +9,6 @@ public class CustomChisel extends CustomTexturedTool implements ChiselAbilities{
 	
 	public CustomChisel(DamageableItem damageable, int durability, String identifier, String name) {
 		super(damageable, "rpg_additions:" + identifier, identifier);
-		setUnbreakable(true); 
-		setUnbreakableVisibility(false);
 		addAttackSpeed(1.2);     //Attack Speed
 		setFakeDurability(durability);
 		setToolLikeAttributes(true);

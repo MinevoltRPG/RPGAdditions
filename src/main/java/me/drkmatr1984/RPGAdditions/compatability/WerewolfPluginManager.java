@@ -2,6 +2,7 @@ package me.drkmatr1984.RPGAdditions.compatability;
 
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,6 +37,7 @@ public class WerewolfPluginManager{
 	public WerewolfPluginManager(JavaPlugin plugin) {
 		this.silverSwordMeta = new SilverSword().getItemMeta();
 		RPGAdditions.getInstance().getPluginManager().registerEvents(new WerewolfDamageListener(), plugin);
+		Bukkit.getConsoleSender().sendMessage("Werewolf Listener Registered");
 	}
 	
 	public ClanManager getClanManager() {

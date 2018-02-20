@@ -1,5 +1,4 @@
-<!-- Template Plugin build file -->
-
+<!-- RPGAdditions build file -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -38,7 +37,7 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.12.1-R0.1-SNAPSHOT</version>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
@@ -52,7 +51,7 @@
         <dependency>
             <groupId>com.chrismin13</groupId>
             <artifactId>AdditionsAPI</artifactId>
-            <version>1.2.2-SNAPSHOT</version>
+            <version>1.2.8-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
@@ -90,10 +89,10 @@
             <version>1.0.2</version>
         </dependency>
         <dependency>
-        	<groupId>me.drkmatr1984</groupId>
-   			<artifactId>customevents</artifactId>
-    		<version>0.12</version>   
-    	</dependency>   
+            <groupId>me.drkmatr1984</groupId>
+            <artifactId>customevents</artifactId>
+            <version>0.13</version>   
+        </dependency>   
     </dependencies>
     <build>
         <plugins>
@@ -120,7 +119,6 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.inventivetalent:recipebuilderlib</include>
-                                    <include>org.inventivetalent:itembuilder</include>
                                     <include>me.drkmatr1984:customevents</include>
                                 </includes>
                             </artifactSet>
