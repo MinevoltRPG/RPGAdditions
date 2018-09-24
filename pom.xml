@@ -37,49 +37,49 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.13-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.13-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.chrismin13</groupId>
             <artifactId>AdditionsAPI</artifactId>
-            <version>1.2.8-SNAPSHOT</version>
+            <version>1.3.2-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.chrismin13.vanillaadditions</groupId>
             <artifactId>VanillaAdditions</artifactId>
-            <version>1.2.6</version>
+            <version>1.3.3</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>ru.beykerykt</groupId>
             <artifactId>LightAPI</artifactId>
-            <version>3.2.4</version>
+            <version>3.2.6</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.github.sipsi133</groupId>
             <artifactId>ShinyItems</artifactId>
-            <version>1.6.1</version>
+            <version>1.6.3</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>us.rfsmassacre</groupId>
             <artifactId>Werewolf</artifactId>
-            <version>1.2.4</version>
+            <version>1.3.1</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>me.drkmatr1984</groupId>
             <artifactId>customevents</artifactId>
-            <version>0.13</version>   
+            <version>0.14</version>   
         </dependency>   
     </dependencies>
     <build>

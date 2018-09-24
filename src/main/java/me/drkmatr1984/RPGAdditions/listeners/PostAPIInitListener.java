@@ -52,38 +52,33 @@ public class PostAPIInitListener implements Listener {
 				for(io.github.sipsi133.ShinyItem shinyItem : io.github.sipsi133.ShinyItems.instance.getLightSources()) {
 					if(shinyItem.getMaterial().equals(Material.GLOWSTONE)) {
 						if(cItem instanceof GlowstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 						if(cItem instanceof GlowstoneSword) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 					}
 					if(shinyItem.getMaterial().equals(Material.GLOWSTONE_DUST)) {
 						if(cItem instanceof GlowstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 						if(cItem instanceof GlowstoneSword) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 					}
-					if(shinyItem.getMaterial().equals(Material.REDSTONE_TORCH_ON)) {
+					if(shinyItem.getMaterial().equals(Material.REDSTONE_TORCH)) {
 						if(cItem instanceof RedstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
-						}
-					}
-					if(shinyItem.getMaterial().equals(Material.REDSTONE_TORCH_OFF)) {
-						if(cItem instanceof RedstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 					}
 					if(shinyItem.getMaterial().equals(Material.REDSTONE)) {
 						if(cItem instanceof RedstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 					}
 					if(shinyItem.getMaterial().equals(Material.REDSTONE_BLOCK)) {
 						if(cItem instanceof RedstoneDagger) {
-							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), cItem.getDurability(), true));
+							shinyItems.add(new io.github.sipsi133.ShinyItem(cItem.getMaterial(), io.github.sipsi133.ShinyItems.getInstance().getLightlevel(shinyItem.getMaterial()), (int) cItem.getDurability(), true));
 						}
 					}
 				}

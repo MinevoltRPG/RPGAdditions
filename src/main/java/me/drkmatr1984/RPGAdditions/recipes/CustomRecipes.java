@@ -137,12 +137,12 @@ public class CustomRecipes
 	}
 	
 	public static void registerCustomSickleRecipe(CustomItemStack result, CustomItemStack head, ItemStack handle) {
-		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "xxd", "sdx").withIngredient('x', head.getItemStack()).withIngredient('b', handle).register();
-		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "dxx", "xds").withIngredient('x', head.getItemStack()).withIngredient('b', handle).register();
+		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "xxd", "sdx").withIngredient('d', head.getItemStack()).withIngredient('s', handle).register();
+		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "dxx", "xds").withIngredient('d', head.getItemStack()).withIngredient('s', handle).register();
 	}
 	
 	public static void registerCustomSickleRecipe(CustomItemStack result, CustomItemStack head, Material handle) {
-		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "xxd", "sdx").withIngredient('x', head.getItemStack()).withIngredient('b', handle).register();
-		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "dxx", "xds").withIngredient('x', head.getItemStack()).withIngredient('b', handle).register();
+		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "xxd", "sdx").withIngredient('d', head.getItemStack()).withIngredient('s', handle).register();
+		new ShapedRecipeBuilder().forResult(result.getItemStack()).withShape("xdx", "dxx", "xds").withIngredient('d', head.getItemStack()).withIngredient('s', handle).register();
 	}
 }

@@ -90,7 +90,6 @@ public class Items implements Listener { // Class must implement Listener
 	@EventHandler
 	public void onInitialization(AdditionsAPIInitializationEvent event) {
 		// Adds the Resource Pack from the plugin's jar. Don't forget to include the .zip extendsion!
-		event.addResourcePackFromPlugin(plugin, "RPGAdditions-v1.0.zip");
 		
 		//################    Ores    ##################
 		event.addCustomItem(new Amethyst());
@@ -256,6 +255,7 @@ public class Items implements Listener { // Class must implement Listener
 			event.addCustomItem(new YellowTopazDoubleAxe());
 			
 		}
+		event.addResourcePackFromPlugin(plugin, "rpgadditions-v1.1.zip");
 	}
 	
 }

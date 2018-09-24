@@ -19,7 +19,7 @@ public class RPGAdditions extends org.bukkit.plugin.java.JavaPlugin
 	{
 		plugin = this;
 		log = getLogger();
-		CustomEvents events = new CustomEvents(this, false, false, false, true);
+		CustomEvents events = new CustomEvents(this, false, false, false, true, false);
 		events.initializeLib();
 		pm = getServer().getPluginManager();
 		if(isWerewolf()) {
